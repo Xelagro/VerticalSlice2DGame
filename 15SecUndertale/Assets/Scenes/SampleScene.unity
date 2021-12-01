@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -149,6 +150,20 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a8b224908f3230418f7b80b4ac94d65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followSpeed: 10
+  yPos: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -217,11 +232,11 @@ GameObject:
   - component: {fileID: 1467467907}
   - component: {fileID: 1467467906}
   - component: {fileID: 1467467905}
-  - component: {fileID: 1467467909}
   - component: {fileID: 1467467908}
+  - component: {fileID: 1467467909}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -236,7 +251,7 @@ Animator:
   m_GameObject: {fileID: 1467467904}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: db36669dd033b77469fe6ca91e1cd4fc, type: 2}
+  m_Controller: {fileID: 9100000, guid: b6a3dc9b7e10b414b9939c13842cb810, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -304,8 +319,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1467467904}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.75037, y: -6.43626, z: 0}
-  m_LocalScale: {x: 0.39661962, y: 0.35506523, z: 1}
+  m_LocalPosition: {x: -4.83, y: 1.65, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -322,6 +337,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f460f3ea4aa5984f8c1dc892d84bf33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 2.5
+  rb: {fileID: 1467467909}
+  animator: {fileID: 1467467905}
 --- !u!50 &1467467909
 Rigidbody2D:
   serializedVersion: 4
