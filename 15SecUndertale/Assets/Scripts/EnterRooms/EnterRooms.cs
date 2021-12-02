@@ -19,6 +19,14 @@ public class EnterRooms : MonoBehaviour
     [Header("Player")]
     public GameObject Player;
 
+
+    private void Start()
+    {
+        Player.SetActive(true);
+        MTTBorgir.SetActive(false);
+        End.SetActive(false);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         MTTBurger(collision);
@@ -30,7 +38,7 @@ public class EnterRooms : MonoBehaviour
     {
         if (MttBurgers == true)
         {
-            if (collision.gameObject.tag == "MTTBorgir")
+            if (collision.gameObject.tag == "Player")
             {
                 Player.SetActive(false);
                 MTTBorgir.SetActive(true);
@@ -42,7 +50,7 @@ public class EnterRooms : MonoBehaviour
     {
         if (LeftHallWay == true)
         {
-            if (coll.gameObject.tag == "LeftHallway")
+            if (coll.gameObject.tag == "Player")
             {
 
             }
@@ -53,7 +61,7 @@ public class EnterRooms : MonoBehaviour
     {
         if (RightHallWay == true)
         {
-            if (colls.gameObject.tag == "RightHallway")
+            if (colls.gameObject.tag == "Player")
             {
 
             }
@@ -62,9 +70,9 @@ public class EnterRooms : MonoBehaviour
 
     public void Exites(Collision2D cole)
     {
-        if (Exits == false)
+        if (Exits == true)
         {
-            if (cole.gameObject.tag == "Exit")
+            if (cole.gameObject.tag == "Player")
             {
                 Player.SetActive(false);
                 End.SetActive(true);
