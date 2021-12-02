@@ -12,6 +12,10 @@ public class EnterRooms : MonoBehaviour
     public bool RightHallWay = false;
     public bool Exits = false;
 
+    [Header("AudioSources")]
+    public AudioSource HotelMusic;
+    public AudioSource ShopMusic;
+
     [Header("UI")]
     public GameObject MTTBorgir;
     public GameObject End;
@@ -27,6 +31,8 @@ public class EnterRooms : MonoBehaviour
         End.SetActive(false);
     }
 
+   
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         MTTBurger(collision);
@@ -41,6 +47,8 @@ public class EnterRooms : MonoBehaviour
             if (collision.gameObject.tag == "Player")
             {
                 Player.SetActive(false);
+                HotelMusic.Stop();
+                ShopMusic.Play();
                 MTTBorgir.SetActive(true);
             }
         }
@@ -79,4 +87,5 @@ public class EnterRooms : MonoBehaviour
             }
         }
     }
+
 }

@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class ShopCurrency : MonoBehaviour
 {
+    //Already have made it before, quite fun to make
+    [Header("Currency")]
     public static int CurrencyValue = 1000;
     Text Currency;
     

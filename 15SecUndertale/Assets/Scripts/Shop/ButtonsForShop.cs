@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonsForShop : MonoBehaviour
 {
-
-
-
+    //For Shop
     public void StarFait()
     {
         if(ShopCurrency.CurrencyValue == 0)
@@ -18,7 +17,7 @@ public class ButtonsForShop : MonoBehaviour
         }
         
     }
-
+    //For Shop
     public void LegendaryHero()
     {
         if(ShopCurrency.CurrencyValue == 0)
@@ -31,7 +30,7 @@ public class ButtonsForShop : MonoBehaviour
         }
        
     }
-    
+    //For Shop
     public void GlamBurger()
     {
         if(ShopCurrency.CurrencyValue == 0)
@@ -43,7 +42,7 @@ public class ButtonsForShop : MonoBehaviour
             ShopCurrency.CurrencyValue -= 120;
         }
     }
-
+    //For Shop
     public void SteakThatLooksLikeMettatonsFace()
     {
         
@@ -56,4 +55,20 @@ public class ButtonsForShop : MonoBehaviour
             ShopCurrency.CurrencyValue -= 500;
         }
     }
+
+    public void SimplePixel()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
+
+    public void HighDefinition()
+    {
+
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
 }

@@ -4,14 +4,9 @@ using UnityEngine;
 
 public class MovementCamera : MonoBehaviour
 {
+    //One of the most easiest code to ever been made xD
     [Header("Player")]
     public Transform target;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
