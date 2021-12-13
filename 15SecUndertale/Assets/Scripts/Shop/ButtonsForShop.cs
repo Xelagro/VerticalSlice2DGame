@@ -8,50 +8,50 @@ public class ButtonsForShop : MonoBehaviour
     //For Shop
     public void StarFait()
     {
-        if(ShopCurrency.CurrencyValue == 0)
+        if(ShopCurrency.CurrencyValue > 60)
         {
-
+            ShopCurrency.CurrencyValue -= 60;
         }
         else{
-            ShopCurrency.CurrencyValue -= 60;
+            
         }
     }
     //For Shop
     public void LegendaryHero()
     {
-        if(ShopCurrency.CurrencyValue == 0)
+        if(ShopCurrency.CurrencyValue > 300)
         {
-
+            ShopCurrency.CurrencyValue -= 300;
         }
         else 
         {
-            ShopCurrency.CurrencyValue -= 300;
+            
         }
        
     }
     //For Shop
     public void GlamBurger()
     {
-        if(ShopCurrency.CurrencyValue == 0)
+        if(ShopCurrency.CurrencyValue > 120)
         {
-
+            ShopCurrency.CurrencyValue -= 120;
         }
         else
         {
-            ShopCurrency.CurrencyValue -= 120;
+            
         }
     }
     //For Shop
     public void SteakThatLooksLikeMettatonsFace()
     {
         
-        if(ShopCurrency.CurrencyValue == 0)
+        if(ShopCurrency.CurrencyValue > 500)
         {
-
+            ShopCurrency.CurrencyValue -= 500;
         }
         else
         {
-            ShopCurrency.CurrencyValue -= 500;
+           
         }
     }
 
