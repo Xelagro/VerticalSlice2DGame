@@ -12,6 +12,8 @@ public class Movement : MonoBehaviour
 
     Vector2 movement;
 
+
+
     // Update zal de inpute in komen.
     void Update()
     {
@@ -27,8 +29,15 @@ public class Movement : MonoBehaviour
             animator.SetFloat("LastHorizontal", Input.GetAxisRaw("Horizontal"));
             animator.SetFloat("LastVertical", Input.GetAxisRaw("Vertical"));
         }
+
+   
+
     }
+
     
+
+
+
     // FixedUpdate zal de movement in komen.
     void FixedUpdate()
     {

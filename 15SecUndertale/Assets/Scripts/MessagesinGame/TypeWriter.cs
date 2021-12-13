@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -26,10 +25,9 @@ public class TypeWriter : MonoBehaviour
 
     private TextWriterSingle AddWrite(Text uiTexting, string textToWriting, float timePerCharacters, bool Invisible, Action onComplete)
     {
-        TextWriterSingle textWriterSingle = new TextWriterSingle(uiTexting, textToWriting, timePerCharacters, Invisible, onComplete);
+        TextWriterSingle textWriterSingle = gameObject.AddComponent<TextWriterSingle>();
         textWriterSingleList.Add(textWriterSingle);
         return textWriterSingle;
-
     }
 
     public static void RemoveWriter_Static(Text uiText)
@@ -39,9 +37,9 @@ public class TypeWriter : MonoBehaviour
 
     public void RemoveWriter(Text uiText)
     {
-        for(int i = 0; i < textWriterSingleList.Count; i++)
+        for (int i = 0; i < textWriterSingleList.Count; i++)
         {
-            if (textWriterSingleList[i].getUIText() == uiText)
+            if (textWriterSingleList[i].GetUIText() == uiText)
             {
                 textWriterSingleList.RemoveAt(i);
                 i--;
@@ -52,9 +50,9 @@ public class TypeWriter : MonoBehaviour
 
     private void Update()
     {
-        for(int i = 0; i<textWriterSingleList.Count; i++)
+        for (int i = 0; i < textWriterSingleList.Count; i++)
         {
-            bool destroyInstance = textWriterSingleList[i].Update();
+            bool destroyInstance = textWriterSingleList[i].Update;
             if (destroyInstance)
             {
                 textWriterSingleList.RemoveAt(i);

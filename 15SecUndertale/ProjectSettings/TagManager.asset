@@ -5,6 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - MTTBorgir
+  - Undefined
+  - Monster1
+  - Monster2
+  - Monster3
+  - Monster4
+  - Monster
+  - ElevatorDoor
+  - SavePoint
+  - Fountain
   layers:
   - Default
   - TransparentFX

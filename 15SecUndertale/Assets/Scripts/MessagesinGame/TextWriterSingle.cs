@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TextWriterSingle
+public class TextWriterSingle : TypeWriter
 {
     private Text uiText;
     private string textToWrite;
@@ -16,46 +16,51 @@ public class TextWriterSingle
 
     public TextWriterSingle(Text uiTexting, string textToWriting, float timePerCharacters, bool Invisible, Action onCompleted)
     {
-        this.uiText = uiTexting;
-        this.textToWrite = textToWriting;
-        this.timePerCharacter = timePerCharacters;
-        this.invisibleCharacters = Invisible;
-        this.onComplete = onCompleted;
+        TextWriterSingle textWriterSingle = this;
+        textWriterSingle.uiText = uiTexting;
+        textWriterSingle.textToWrite = textToWriting;
+        textWriterSingle.timePerCharacter = timePerCharacters;
+        textWriterSingle.invisibleCharacters = Invisible;
+        textWriterSingle.onComplete = onCompleted;
         characterIndex = 0;
     }
-    public bool Update()
+
+    public bool Update
     {
-        timer -= Time.deltaTime;
-        while (timer <= 0f)
+        get
         {
-            //display next character
-            timer += timePerCharacter;
-            characterIndex++;
-            string text = textToWrite.Substring(0, characterIndex);
-            if (invisibleCharacters)
+            timer -= Time.deltaTime;
+            while (timer <= 0f)
             {
-                text += "<color=#00000000>" + textToWrite.Substring(characterIndex) + "</color>";
-            }
-            uiText.text = text;
+                //display next character
+                timer += timePerCharacter;
+                characterIndex++;
+                string text = textToWrite.Substring(0, characterIndex);
+                if (invisibleCharacters)
+                {
+                    text += "<color=#00000000>" + textToWrite.Substring(characterIndex) + "</color>";
+                }
 
-            if (characterIndex >= textToWrite.Length)
-            {
-                //Entire string displayed
-                uiText = null;
-                if (onComplete != null) onComplete();
-                return true;
+                uiText.text = text;
+
+                if (characterIndex >= textToWrite.Length)
+                {
+                    //Entire string displayed
+                    uiText = null;
+                    if (onComplete != null) onComplete();
+                    return true;
+                }
             }
+            return false;
         }
-        return false;
-
     }
 
-    public Text getUIText()
+    public Text GetUIText()
     {
         return uiText;
     }
 
-    public bool IsActive()
+    public bool GetIsActive()
     {
         return characterIndex < textToWrite.Length;
     }

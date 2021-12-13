@@ -7,28 +7,19 @@ public class DialogueSystem : MonoBehaviour
 {
     [SerializeField]
     private string[] messageArray;
+    [SerializeField]
     private Text messageText;
+    [SerializeField]
     private TextWriterSingle textWriter;
+    [SerializeField]
     private AudioSource talkingAudioSource;
 
     private void Awake()
     {
-        messageText = transform.Find("message").Find("messageText").GetComponent<Text>();
-        talkingAudioSource = transform.Find("TalkingSound").GetComponent<AudioSource>();
-        if (Input.GetKeyDown("z"))
-        {
-            if (textWriter != null && textWriter.IsActive())
-            {
-                //Currently active TextWriter
-                textWriter.WriteAllandDestroy();
-            }
-            else
-            {
-                string message = messageArray[Random.Range(0, messageArray.Length)];
-                StartTalkingSound();
-                textWriter = TypeWriter.AddWrite_Static(messageText, message, .1f, true, true, StopTalkingSound);
-            }
-        }
+        //find the message text gameobject
+        messageText = GameObject.Find("messageText").GetComponent<Text>();
+        //find the talkingaudiosource gameobject
+        talkingAudioSource = GameObject.Find("TalkingSoundCharacter").GetComponent<AudioSource>();
     }
 
     private void StartTalkingSound()
@@ -41,10 +32,26 @@ public class DialogueSystem : MonoBehaviour
         talkingAudioSource.Stop();
     }
 
-    private void Start()
+    private void Update()
     {
-        //TypeWriter.AddWrite_Static(messageText, "", .3f, true);
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            if (!(textWriter != null && textWriter.GetIsActive()))
+            {
+                //start talking
+                string message = messageArray[Random.Range(0, messageArray.Length)];
+                StartTalkingSound();
+                textWriter = TypeWriter.AddWrite_Static(messageText, message, .3f, true, true, StopTalkingSound);
+                
+            }
+            else
+            {
+                //Currently active TextWriter
+                textWriter.WriteAllandDestroy();
+            }
+        }
     }
+
 }
 
 

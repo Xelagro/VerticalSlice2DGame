@@ -5,21 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class EnterRooms : MonoBehaviour
 {
-
+    //bool settings
     [Header("Bool Settings")]
     public bool MttBurgers = false;
     public bool LeftHallWay = false;
     public bool RightHallWay = false;
     public bool Exits = false;
 
+    //The audiosources for the hotel and shop music
     [Header("AudioSources")]
     public AudioSource HotelMusic;
     public AudioSource ShopMusic;
 
+    //The MTT Burger menu
     [Header("UI")]
     public GameObject MTTBorgir;
     public GameObject End;
 
+    //The gameobject of the player
     [Header("Player")]
     public GameObject Player;
 
@@ -30,8 +33,6 @@ public class EnterRooms : MonoBehaviour
         MTTBorgir.SetActive(false);
         End.SetActive(false);
     }
-
-   
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

@@ -15,7 +15,6 @@ public class ButtonsForShop : MonoBehaviour
         else{
             ShopCurrency.CurrencyValue -= 60;
         }
-        
     }
     //For Shop
     public void LegendaryHero()
