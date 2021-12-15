@@ -11,7 +11,7 @@ public class BooleansChecker : MonoBehaviour
     public OnCollisionsForDialogue Bools4;
     public OnCollisionsForDialogue Bools5;
     public OnCollisionsForDialogue Bools6;
-
+    public OnCollisionsForDialogue Bools7;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -42,6 +42,10 @@ public class BooleansChecker : MonoBehaviour
         if(collision.gameObject.tag == "Fountain")
         {
             Bools6.fountain = true;
+        }
+        if(collision.gameObject.tag == "Chest")
+        {
+            Bools7.chest = true;
         }
     }
 }

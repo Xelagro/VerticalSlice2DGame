@@ -43,6 +43,7 @@ public class DialogueManager : MonoBehaviour
             dialogueBool.elevator = false;
             dialogueBool.savePoint = false;
             dialogueBool.fountain = false;
+            dialogueBool.chest = false;
             return;
         }
         Debug.Log("Yeeeh");

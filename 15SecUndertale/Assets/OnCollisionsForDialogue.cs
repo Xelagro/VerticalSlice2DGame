@@ -12,6 +12,7 @@ public class OnCollisionsForDialogue : MonoBehaviour
     public bool elevator = false;
     public bool savePoint = false;
     public bool fountain = false;
+    public bool chest = false;
 
     [Header("SetActive to UI when chosen with bools")]
     public GameObject Monster;
@@ -21,6 +22,7 @@ public class OnCollisionsForDialogue : MonoBehaviour
     public GameObject Elevator;
     public GameObject SavePoint;
     public GameObject Fountain;
+    public GameObject Chest;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +34,7 @@ public class OnCollisionsForDialogue : MonoBehaviour
         Elevator.SetActive(false);
         SavePoint.SetActive(false);
         Fountain.SetActive(false);
+        Chest.SetActive(false);
     }
 
     // Update is called once per frame
@@ -64,6 +67,10 @@ public class OnCollisionsForDialogue : MonoBehaviour
         if (fountain == true && Input.GetKeyDown(KeyCode.Z))
         {
             Fountain.SetActive(true);
+        }
+        if (chest == true && Input.GetKeyDown(KeyCode.Z))
+        {
+            Chest.SetActive(true);
         }
     }
 
