@@ -26,12 +26,17 @@ public class EnterRooms : MonoBehaviour
     [Header("Player")]
     public GameObject Player;
 
+    [Header("Random BurgerPants")]
+    public GameObject[] Burgerpants;
+    public ButtonsForShop GoneTexting;
 
     private void Start()
     {
         Player.SetActive(true);
         MTTBorgir.SetActive(false);
         End.SetActive(false);
+        GoneTexting.GoneText.SetActive(false);
+        GoneTexting.Text.SetActive(false);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -51,6 +56,8 @@ public class EnterRooms : MonoBehaviour
                 HotelMusic.Stop();
                 ShopMusic.Play();
                 MTTBorgir.SetActive(true);
+                Burgerpants[Random.Range(0, Burgerpants.Length)].SetActive(true);
+                GoneTexting.GoneText.SetActive(true);
             }
         }
     }

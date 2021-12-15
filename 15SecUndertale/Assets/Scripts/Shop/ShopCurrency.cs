@@ -9,7 +9,7 @@ public class ShopCurrency : MonoBehaviour
     //Already have made it before, quite fun to make
     [Header("Currency")]
     public static int CurrencyValue = 1000;
-    Text Currency;
+    public static Text Currency;
     
     // Start is called before the first frame update
     void Start()
