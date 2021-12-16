@@ -57,3 +57,18 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+*.meta
+*.asmdef
+15SecUndertale/Library/PackageCache/com.unity.2d.pixel-perfect@4.0.1/Samples~/Scenes and Extras/Scenes/Presets/Texture Importers/TextureImporter_32PPU_PointFilter.preset.meta
+*.preset
+*.asmdef
+*.meta
+
+ # Crashlytics generated file
+crashlytics-build.properties
+*.meta
+*.asmdef
+15SecUndertale/Library/PackageCache/com.unity.2d.pixel-perfect@4.0.1/Samples~/Scenes and Extras/Scenes/Presets/Texture Importers/TextureImporter_32PPU_PointFilter.preset.meta
+*.preset
+*.asmdef
+*.meta
