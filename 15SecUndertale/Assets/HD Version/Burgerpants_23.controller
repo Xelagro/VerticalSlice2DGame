@@ -1,6 +1,10 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!1107 &-6573267693690997636
+=======
+--- !u!1107 &-11529451608160945
+>>>>>>> 06b84bb12012f610df2c75d64581e745b87e78ae
 AnimatorStateMachine:
   serializedVersion: 6
   m_ObjectHideFlags: 1
@@ -10,7 +14,11 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
+<<<<<<< HEAD
     m_State: {fileID: 9029962574702466034}
+=======
+    m_State: {fileID: 3350548161889345733}
+>>>>>>> 06b84bb12012f610df2c75d64581e745b87e78ae
     m_Position: {x: 200, y: 0, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
@@ -21,7 +29,11 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
+<<<<<<< HEAD
   m_DefaultState: {fileID: 9029962574702466034}
+=======
+  m_DefaultState: {fileID: 3350548161889345733}
+>>>>>>> 06b84bb12012f610df2c75d64581e745b87e78ae
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -34,7 +46,11 @@ AnimatorController:
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
+<<<<<<< HEAD
     m_StateMachine: {fileID: -6573267693690997636}
+=======
+    m_StateMachine: {fileID: -11529451608160945}
+>>>>>>> 06b84bb12012f610df2c75d64581e745b87e78ae
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
@@ -44,14 +60,22 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+<<<<<<< HEAD
 --- !u!1102 &9029962574702466034
+=======
+--- !u!1102 &3350548161889345733
+>>>>>>> 06b84bb12012f610df2c75d64581e745b87e78ae
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_Name: Smoking
+=======
+  m_Name: SmokingBurgerPants
+>>>>>>> 06b84bb12012f610df2c75d64581e745b87e78ae
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -64,7 +88,11 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
+<<<<<<< HEAD
   m_Motion: {fileID: 7400000, guid: 888ab49c47f7dd94dbd9e09a783dcd98, type: 2}
+=======
+  m_Motion: {fileID: 7400000, guid: 681aaa7e9c8fc3445ae7b19996d579f6, type: 2}
+>>>>>>> 06b84bb12012f610df2c75d64581e745b87e78ae
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
