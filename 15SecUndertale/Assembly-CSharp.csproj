@@ -72,11 +72,13 @@
     <Compile Include="Assets\Scripts\MessagesinGame\Dialogue.cs" />
     <Compile Include="Assets\CodeMonkey\Utils\FunctionUpdater.cs" />
     <Compile Include="Assets\Scripts\Movement\Movement.cs" />
+    <Compile Include="Assets\Main\ButtonsForMainMenu.cs" />
     <Compile Include="Assets\CodeMonkey\Utils\FunctionTimer.cs" />
     <Compile Include="Assets\Scripts\EscapeGame.cs" />
     <Compile Include="Assets\CodeMonkey\Utils\UI_Bar.cs" />
     <Compile Include="Assets\BooleansChecker.cs" />
     <Compile Include="Assets\Scripts\MessagesinGame\DialogueManager.cs" />
+    <Compile Include="Assets\Scripts\MessagesinGame\DialogueForShop.cs" />
     <Compile Include="Assets\Scripts\MessagesinGame\TypeWriter.cs" />
     <Compile Include="Assets\CodeMonkey\Utils\UI_Sprite.cs" />
     <Compile Include="Assets\CodeMonkey\Utils\UI_BarMultiple.cs" />
@@ -86,7 +88,7 @@
     <Compile Include="Assets\Scripts\MessagesinGame\TextWriterSingle.cs" />
     <Compile Include="Assets\CodeMonkey\CMDebug.cs" />
     <Compile Include="Assets\CodeMonkey\Utils\FunctionPeriodic.cs" />
-    <Compile Include="Assets\Scripts\MessagesinGame\DialogueForShop.cs" />
+    <Compile Include="Assets\GoBackToMenu.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\CodeMonkey\README.txt" />

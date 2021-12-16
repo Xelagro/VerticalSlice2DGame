@@ -15,6 +15,7 @@ TagManager:
   - SavePoint
   - Fountain
   - Chest
+  - End
   layers:
   - Default
   - TransparentFX

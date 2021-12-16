@@ -320,19 +320,6 @@ public class ButtonsForShop : MonoBehaviour
     }
 
 
-    public void SimplePixel()
-    {
-        SceneManager.LoadScene("SampleScene");
-    }
-
-    public void HighDefinition()
-    {
-
-    }
-
-    public void ExitGame()
-    {
-        Application.Quit();
-    }
+   
 
 }
